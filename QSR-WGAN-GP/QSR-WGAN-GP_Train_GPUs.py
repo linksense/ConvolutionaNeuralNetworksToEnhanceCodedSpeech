@@ -67,43 +67,9 @@ def selu(x):
 # 2. Define Generative model and Adversarial model
 #####################################################################################
 def create_generator(inputs_gen):
-    n1 = 32
-    n2 = 64
-    n3 = 32
-
-    c1 = Conv1D(n1, 3, padding='same', name='conv_1')(inputs_gen)
-    c1 = Activation(selu, name='act_1')(c1)
-    c1 = Conv1D(n1, 3, padding='same', name='conv_2')(c1)
-    c1 = Activation(selu, name='act_2')(c1)
-    x = MaxPooling1D(2, name='mpool_1')(c1)
-
-    c2 = Conv1D(n2, 3, padding='same', name='conv_3')(x)
-    c2 = Activation(selu, name='act_3')(c2)
-    c2 = Conv1D(n2, 3, padding='same', name='conv_4')(c2)
-    c2 = Activation(selu, name='act_4')(c2)
-    x = MaxPooling1D(2, name='mpool_2')(c2)
-
-    c3 = Conv1D(n3, 3, padding='same', name='conv_5')(x)
-    c3 = Activation(selu, name='act_5')(c3)
-    x = UpSampling1D(2, name='usample_1')(c3)
-
-    c2_2 = Conv1D(n2, 3, padding='same', name='conv_6')(x)
-    c2_2 = Activation(selu, name='act_6')(c2_2)
-    c2_2 = Conv1D(n2, 3, padding='same', name='conv_7')(c2_2)
-    c2_2 = Activation(selu, name='act_7')(c2_2)
-
-    m1 = Add(name='add_1')([c2, c2_2])
-    m1 = UpSampling1D(2, name='usample_2')(m1)
-
-    c1_2 = Conv1D(n1, 3, padding='same', name='conv_8')(m1)
-    c1_2 = Activation(selu, name='act_8')(c1_2)
-    c1_2 = Conv1D(n1, 3, padding='same', name='conv_9')(c1_2)
-    c1_2 = Activation(selu, name='act_9')(c1_2)
-
-    m2 = Add(name='add_2')([c1, c1_2])
-
-    decoded = Conv1D(1, 5, padding='same', activation='linear', name='conv_10')(m2)
-
+    """
+    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    """
     return decoded
 
 
