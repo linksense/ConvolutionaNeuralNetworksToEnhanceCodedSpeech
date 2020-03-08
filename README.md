@@ -16,4 +16,7 @@ If you use **Convolutional Neural Networks to Enhance Coded Speech** in your res
 }
 ```
 
+<p align="center">
+<img src="https://github.com/ansleliu/ConvolutionaNeuralNetworksToEnhanceCodedSpeech/blob/master/CNN2EnhancedSpeech.PNG" />
+</p>
 
